@@ -2,7 +2,7 @@
 
 ## Jammming
 
-Jammming is a single page react app which allows the user to search spotify and create playlists. The Authorization file is coppied from mph's OAuth template. That repository can be found <a href="https://github.com/AodenTeo/oauth-bridge-template.git">here.</a>
+Jammming is a single page react app which allows the user to search spotify and create playlists. The Authorization file is copied from mpj's OAuth template. That repository can be found <a href="https://github.com/mpj/oauth-bridge-template.git" target="_blank">here.</a>
 
 ## Runing Jammming Locally
 
