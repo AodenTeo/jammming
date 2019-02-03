@@ -4,7 +4,7 @@ import './SearchBar.css';
 class SearchBar extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {term: 'StringThatWillNotReturnAnyResult'};
+		this.state = { term: 'StringThatWillNotReturnAnyResult' };
 		this.handleSearch = this.handleSearch.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
 		let query;
 		let safeString;
 		safeString = event.target.value.split(" ").map(word => {
-			return word.replace(/\W/g,'')
+			return word.replace(/\W/g, '')
 		}).join("%20")
 		if (safeString === "" || event.target.value == undefined) {
 			query = 'StringThatWillNotReturnAnyResult'
@@ -25,14 +25,14 @@ class SearchBar extends React.Component {
 			query = safeString
 		}
 
-		this.setState({term: query})
+		this.setState({ term: query })
 	}
 
 	render() {
 		return (<div className="SearchBar">
-		          <input placeholder="Enter A Song Title" onChange={this.handleChange} />
-		          <a onClick={this.handleSearch}>SEARCH</a>
-		        </div>);
+			<input placeholder="Enter A Song Title" onChange={this.handleChange} />
+			<a onClick={this.handleSearch}>SEARCH</a>
+		</div>);
 	}
 }
 export default SearchBar;

@@ -12,12 +12,12 @@ class Song extends React.Component {
 	}
 	render() {
 		return (<div className="Track">
-                <div className="Track-information">
-                  <h3 className="Track-name">{this.props.song.name}</h3>
-                  <p>{`${this.props.song.artist} | ${this.props.song.album}`}</p>
-                </div>
-                <a className="Track-action" onClick={this.addSong}>+</a>
-              </div>)
+			<div className="Track-information">
+				<h3 className="Track-name">{this.props.song.name}</h3>
+				<p>{`${this.props.song.artist} | ${this.props.song.album}`}</p>
+			</div>
+			<a className="Track-action" onClick={this.addSong}>+</a>
+		</div>)
 	}
 }
 export default Song;

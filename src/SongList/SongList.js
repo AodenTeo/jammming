@@ -8,14 +8,14 @@ class SongList extends React.Component {
 	}
 	render() {
 		return (<div className="TrackList">
-		{
-			this.props.songs.map(song => {
-				return <Song key = {song.id} song = {song} addSong = {this.props.addSong} />
-			}
+			{
+				this.props.songs.map(song => {
+					return <Song key={song.id} song={song} addSong={this.props.addSong} />
+				}
 
-			)
-		}
-			</div>)
+				)
+			}
+		</div>)
 	}
 }
 export default SongList;

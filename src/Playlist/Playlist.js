@@ -8,17 +8,17 @@ class Playlist extends React.Component {
 
 	}
 	render() {
-    let playlist = [...new Set(this.props.playlist)]
+		let playlist = [...new Set(this.props.playlist)]
 
 		return (<div className="TrackList">
-		{
-			playlist.map(song => {
-				return <PlaylistSong key = {song.id}song = {song} removeSong = {this.props.removeSong} playlist = {playlist}/>
-			}
+			{
+				playlist.map(song => {
+					return <PlaylistSong key={song.id} song={song} removeSong={this.props.removeSong} playlist={playlist} />
+				}
 
-			)
-		}
-			</div>)
+				)
+			}
+		</div>)
 	}
 }
 export default Playlist;
