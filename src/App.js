@@ -65,6 +65,8 @@ class App extends Component {
     console.log(this.state.playlist);
     console.log(this.state.playlistname);
   }
+  
+
 
   render() {
     return (

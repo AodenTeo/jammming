@@ -7,11 +7,20 @@ class SearchBar extends React.Component {
 		this.state = { term: 'StringThatWillNotReturnAnyResult' };
 		this.handleSearch = this.handleSearch.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+		this.handleSearch = this.handleSearch.bind(this);
+		this.enterPressed = this.enterPressed.bind(this);
 	}
 	handleSearch(event) {
 		this.props.handleClick(this.state.term)
 
 		event.preventDefault();
+	}
+	enterPressed(event) {
+		const code = event.keyCode || event.which;
+		if(code === 13) { 
+			this.handleSearch();
+		}
+		
 	}
 	handleChange(event) {
 		let query;
@@ -30,8 +39,8 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (<div className="SearchBar">
-			<input placeholder="Enter A Song Title" onChange={this.handleChange} />
-			<a onClick={this.handleSearch}>SEARCH</a>
+			<input placeholder="Enter A Song Title" onChange={this.handleChange} onKeyDown={this.enterPressed} />
+			<a onClick={this.handleSearch} onKeyUp={this.enterPressed}>SEARCH</a>
 		</div>);
 	}
 }
